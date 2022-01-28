@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/porteactovies2.0/static/css/main.62c17934.css",
-    "main.js": "/porteactovies2.0/static/js/main.4baa9583.js",
-    "static/media/logo.png": "/porteactovies2.0/static/media/logo.6fd2d315a4115cada04c.png",
-    "static/media/search_icon.svg": "/porteactovies2.0/static/media/search_icon.f4c2f748315fe7dcbcce8c72fc88455b.svg",
-    "static/media/arrow-slide.svg": "/porteactovies2.0/static/media/arrow-slide.e88a83ae8502224a205e.svg",
-    "static/media/arrowback_111142.svg": "/porteactovies2.0/static/media/arrowback_111142.eb0d01eb881c53f5bd60.svg",
-    "index.html": "/porteactovies2.0/index.html",
-    "main.62c17934.css.map": "/porteactovies2.0/static/css/main.62c17934.css.map",
-    "main.4baa9583.js.map": "/porteactovies2.0/static/js/main.4baa9583.js.map"
+    "main.css": "/portReactMovies2.0/static/css/main.8d87a606.css",
+    "main.js": "/portReactMovies2.0/static/js/main.e3e0cc58.js",
+    "static/media/logo.png": "/portReactMovies2.0/static/media/logo.6fd2d315a4115cada04c.png",
+    "static/media/search_icon.svg": "/portReactMovies2.0/static/media/search_icon.f4c2f748315fe7dcbcce8c72fc88455b.svg",
+    "static/media/arrow-slide.svg": "/portReactMovies2.0/static/media/arrow-slide.e88a83ae8502224a205e.svg",
+    "static/media/arrowback_111142.svg": "/portReactMovies2.0/static/media/arrowback_111142.eb0d01eb881c53f5bd60.svg",
+    "static/media/arrow_up_icon.svg": "/portReactMovies2.0/static/media/arrow_up_icon.c8f682d4b242a83fc2d2.svg",
+    "index.html": "/portReactMovies2.0/index.html",
+    "main.8d87a606.css.map": "/portReactMovies2.0/static/css/main.8d87a606.css.map",
+    "main.e3e0cc58.js.map": "/portReactMovies2.0/static/js/main.e3e0cc58.js.map"
   },
   "entrypoints": [
-    "static/css/main.62c17934.css",
-    "static/js/main.4baa9583.js"
+    "static/css/main.8d87a606.css",
+    "static/js/main.e3e0cc58.js"
   ]
 }
