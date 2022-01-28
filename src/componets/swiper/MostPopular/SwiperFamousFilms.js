@@ -14,14 +14,15 @@ SwiperCore.use([Navigation, Autoplay]);
 export default function SwiperFamousFilms({ itemsMovies, loading }) {
 
 
-
+    const windowOuterWidth = window.outerWidth
+    console.log('windowOuterWidth', windowOuterWidth)
     return (
         <>
             <Swiper navigation={true} loop={true}
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: true
-                }} slidesPerView={5}
+                }} slidesPerView={windowOuterWidth < 1200 ? windowOuterWidth < 1000 ? windowOuterWidth < 670 ? windowOuterWidth < 450 ? 1 : 2 : 3 : 4 : 5}
                 className="mySwiper">
                 {loading ? <SwiperSlide >
                     <h1>loading...</h1>

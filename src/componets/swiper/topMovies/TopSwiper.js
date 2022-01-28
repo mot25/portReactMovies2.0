@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css/bundle'
@@ -14,17 +14,9 @@ SwiperCore.use([[Navigation, Autoplay]])
 
 
 export default function TopSwiper({ itemsMovies, loading }) {
-    const arrowEdit = () => {
-        const swiper = document.querySelector('.mySwiperTop')
-        const rightArrow = swiper.querySelector('.swiper-button-next')
-        rightArrow.classList.add('swiper-button-next_top')
-        const leftArrow = swiper.querySelector('.swiper-button-prev')
-        leftArrow.classList.add('swiper-button-prev_top')
-    }
 
-    useEffect(() => {
-        arrowEdit()
-    }, [])
+
+
 
     return (
         <>
