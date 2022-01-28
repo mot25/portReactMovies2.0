@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portReactMovies2.0/static/css/main.8d87a606.css",
-    "main.js": "/portReactMovies2.0/static/js/main.e3e0cc58.js",
+    "main.js": "/portReactMovies2.0/static/js/main.f329063c.js",
     "static/media/logo.png": "/portReactMovies2.0/static/media/logo.6fd2d315a4115cada04c.png",
     "static/media/search_icon.svg": "/portReactMovies2.0/static/media/search_icon.f4c2f748315fe7dcbcce8c72fc88455b.svg",
     "static/media/arrow-slide.svg": "/portReactMovies2.0/static/media/arrow-slide.e88a83ae8502224a205e.svg",
@@ -9,10 +9,10 @@
     "static/media/arrow_up_icon.svg": "/portReactMovies2.0/static/media/arrow_up_icon.c8f682d4b242a83fc2d2.svg",
     "index.html": "/portReactMovies2.0/index.html",
     "main.8d87a606.css.map": "/portReactMovies2.0/static/css/main.8d87a606.css.map",
-    "main.e3e0cc58.js.map": "/portReactMovies2.0/static/js/main.e3e0cc58.js.map"
+    "main.f329063c.js.map": "/portReactMovies2.0/static/js/main.f329063c.js.map"
   },
   "entrypoints": [
     "static/css/main.8d87a606.css",
-    "static/js/main.e3e0cc58.js"
+    "static/js/main.f329063c.js"
   ]
 }
