@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/portReactMovies2.0/static/css/main.bc9a6ef0.css",
-    "main.js": "/portReactMovies2.0/static/js/main.08add2ee.js",
+    "main.css": "/portReactMovies2.0/static/css/main.e9caf291.css",
+    "main.js": "/portReactMovies2.0/static/js/main.53a95ad8.js",
     "static/media/search_icon.svg": "/portReactMovies2.0/static/media/search_icon.f4c2f748315fe7dcbcce8c72fc88455b.svg",
     "static/media/arrow-slide.svg": "/portReactMovies2.0/static/media/arrow-slide.e88a83ae8502224a205e.svg",
+    "static/media/svg-editor-image.svg": "/portReactMovies2.0/static/media/svg-editor-image.30d3e34eb211a7ed63bf7c1b170256e0.svg",
     "static/media/arrowback_111142.svg": "/portReactMovies2.0/static/media/arrowback_111142.eb0d01eb881c53f5bd60.svg",
     "index.html": "/portReactMovies2.0/index.html",
     "static/media/arrow_up_icon.svg": "/portReactMovies2.0/static/media/arrow_up_icon.ee783a7ecac433e203d7.svg",
-    "main.bc9a6ef0.css.map": "/portReactMovies2.0/static/css/main.bc9a6ef0.css.map",
-    "main.08add2ee.js.map": "/portReactMovies2.0/static/js/main.08add2ee.js.map"
+    "main.e9caf291.css.map": "/portReactMovies2.0/static/css/main.e9caf291.css.map",
+    "main.53a95ad8.js.map": "/portReactMovies2.0/static/js/main.53a95ad8.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc9a6ef0.css",
-    "static/js/main.08add2ee.js"
+    "static/css/main.e9caf291.css",
+    "static/js/main.53a95ad8.js"
   ]
 }
