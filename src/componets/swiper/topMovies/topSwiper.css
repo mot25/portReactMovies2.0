@@ -44,9 +44,10 @@
   overflow: visible;
 }
 
-.mySwiperTop > .swiper-button-next,.mySwiperTop >
-.swiper-button-prev {
+.mySwiperTop > .swiper-button-next,
+.mySwiperTop > .swiper-button-prev {
   top: -13%;
+
   width: 56px;
   height: 56px;
 }

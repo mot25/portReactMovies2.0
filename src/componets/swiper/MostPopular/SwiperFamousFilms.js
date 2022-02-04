@@ -16,6 +16,7 @@ export default function SwiperFamousFilms({ itemsMovies, loading }) {
 
     const windowOuterWidth = window.outerWidth
     // console.log('windowOuterWidth', windowOuterWidth)
+
     return (
         <>
             <Swiper navigation={true} loop={true}

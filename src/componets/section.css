@@ -1,0 +1,61 @@
+.MostFamousMovies {
+  padding-top: 20px;
+}
+
+.btn_mode.active {
+  filter: blur(2px);
+  order: 2;
+}
+.btn_mode {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 30px;
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.wrapper_mode {
+  display: flex;
+  justify-content: center;
+}
+
+.span_mode {
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.TopFamous {
+}
+.TopFamous_title > * {
+  letter-spacing: 2px;
+  display: inline-block;
+}
+.TopFamous_title > h2 {
+  font-size: 37px;
+  color: #fff;
+}
+.TopFamous_title > span {
+  font-size: 37px;
+  color: rgb(143, 143, 143);
+}
+.TopFamous_title > p {
+  font-size: 23px;
+  color: rgb(143, 143, 143);
+  cursor: pointer;
+  position: relative;
+}
+.TopFamous_title > p::after {
+  content: "";
+  position: absolute;
+  background-image: url("./img/arrow_up_icon.svg");
+  width: 24px;
+    height: 24px;
+    top: 2px;
+    right: -20px;
+}
