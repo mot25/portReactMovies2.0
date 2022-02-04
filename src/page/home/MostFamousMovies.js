@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { API_KEY_MOVIES } from '../../config.js'
-import SwiperFamousFilms from '../swiper/MostPopular/SwiperFamousFilms'
+import { API_KEY_MOVIES } from '../../config';
+import SwiperFamousFilms from '../../componets/swiper/MostPopular/SwiperFamousFilms'
 import '../section.css'
 export default function MostFamousMovies() {
 
@@ -26,16 +26,14 @@ export default function MostFamousMovies() {
     document.querySelectorAll('.btn_mode').forEach(element => {
       element.classList.remove('active')
       if (element.dataset.value !== e.target.value) {
-        console.dir(element);
         element.classList.add('active')
       }
-      console.dir(element.classList);
     });
   }
 
   return <section className='MostFamousMovies'>
     <div className='wrapper_mode'>
-      <span className='span_mode'>Most popular</span>
+      <span className='span_mode'>Most popular  </span>
       <button className='btn_mode active' data-value='MostPopularMovies' onClick={e => modeFun(e)} value="MostPopularMovies">movies</button>
       <button className='btn_mode ' data-value='MostPopularTVs' onClick={e => modeFun(e)} value="MostPopularTVs">serils</button>
     </div>

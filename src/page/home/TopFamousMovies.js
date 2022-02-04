@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { API_KEY_MOVIES } from '../../config.js'
-import TopSwiper from '../swiper/topMovies/TopSwiper'
+import { API_KEY_MOVIES } from '../../config';
 import '../section.css'
-export default function TopFamousSerials() {
+import TopSwiper from '../../componets/swiper/topMovies/TopSwiper'
+
+export default function MostFamousMovies() {
 
   const [loading, setloading] = useState(true)
   const [arrMovies, setarrMovies] = useState([])
@@ -19,7 +20,7 @@ export default function TopFamousSerials() {
   }
 
   useEffect(() => {
-    fetchTopMovies('Top250TVs')
+    fetchTopMovies('Top250Movies')
   }, [])
 
   return (
@@ -27,10 +28,11 @@ export default function TopFamousSerials() {
       <div className="container">
 
         <div className="TopFamous_title">
-          <h2>Serials</h2> <span>|</span> <p>Look more</p>
+          <h2>Films</h2> <span>|</span> <p>Look more</p>
         </div>
         <TopSwiper itemsMovies={arrMovies.items} loading={loading} />
       </div>
     </section>
   );
 }
+// https://imdb-api.com/en/API/Top250Movies/k_rc78btn4

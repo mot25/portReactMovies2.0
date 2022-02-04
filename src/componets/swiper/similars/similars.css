@@ -1,0 +1,3 @@
+.gallery.gallery_tvShowsGallery .gallery__list_slimPosterBlock.gallery__list_type_thumb .gallery__item, .gallery__list_fixedSlimPosterBlock.gallery__list_type_poster .gallery__item, .gallery__list_slimPosterBlock.gallery__list_type_miniPromo.gallery__list_version_2 .gallery__item, .gallery__list_slimPosterBlock.gallery__list_type_person .gallery__item, .gallery__list_slimPosterBlock.gallery__list_type_poster .gallery__item, .gallery__list_type_filterTile .gallery__item, .gallery__list_type_genreTile .gallery__item, .gallery__list_type_nbl-filterTile .gallery__item, .gallery_miniPromo_version_2 .gallery__list_miniPromo .gallery__item {
+    width: 100%;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css/bundle'
@@ -14,17 +14,9 @@ SwiperCore.use([[Navigation, Autoplay]])
 
 
 export default function TopSwiper({ itemsMovies, loading }) {
-    const arrowEdit = () => {
-        const swiper = document.querySelector('.mySwiperTop')
-        const rightArrow = swiper.querySelector('.swiper-button-next')
-        rightArrow.classList.add('swiper-button-next_top')
-        const leftArrow = swiper.querySelector('.swiper-button-prev')
-        leftArrow.classList.add('swiper-button-prev_top')
-    }
 
-    useEffect(() => {
-        arrowEdit()
-    }, [])
+    const windowOuterWidth = window.outerWidth
+
 
     return (
         <>
@@ -32,7 +24,7 @@ export default function TopSwiper({ itemsMovies, loading }) {
                 autoplay={{
                     delay: 5000,
                     disableOnInteraction: true
-                }} slidesPerView={4}
+                }} slidesPerView={windowOuterWidth < 1200 ? windowOuterWidth < 1000 ? windowOuterWidth < 670 ? windowOuterWidth < 450 ? 1 : 1 :2 :3 : 4}
                 className="mySwiperTop">
                 {/* <SwiperSlide><div className="swiper-items">
                     <img src="https://www.whatdigitalcamera.com/wp-content/uploads/sites/13/2015/10/Photoshop-CC-UI.jpg" />

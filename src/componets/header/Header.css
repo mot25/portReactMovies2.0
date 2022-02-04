@@ -50,6 +50,7 @@
   margin: 25px;
   font-family: "PT Serif", serif;
   font-style: italic;
+  color: #fff;
   transition: all 0.4s;
 }
 .header__item:hover {

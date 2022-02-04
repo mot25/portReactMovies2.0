@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400&display=swap");
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: rgb(30, 35, 60);
   background: radial-gradient(
@@ -15,3 +17,20 @@ body {
   min-width: 320px;
   overflow: hidden;
 }
+::-webkit-scrollbar{
+  width: 11px;
+  height: 11px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: #276BA3;
+  border: 10px solid #1D2459;
+  border-radius: 18px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: #B3AFB3;
+  }
+  ::-webkit-scrollbar-track{
+  background: #8880B8;
+  border-radius: 0px;
+  box-shadow: inset -2.4px 6.1px 30px 24px #B3B3B3;
+  }
