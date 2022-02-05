@@ -10,7 +10,6 @@ export default function MostFamousMovies() {
     await fetch(`https://imdb-api.com/ru/API/${mode}/${API_KEY_MOVIES}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data.items);
         setarrMovies(data)
         setloading(false)
       })

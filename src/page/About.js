@@ -2,6 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import Similars from '../componets/swiper/similars/Similars';
 import SwiperActorsAndValue from '../componets/swiper/swiperActorsAndValue/SwiperActorsAndValue';
 import SwipetComments from '../componets/swiper/swipetComments/SwipetComments';
+import SwiperPosterPageItem from '../componets/swiper/swiperPosterPageItem/SwiperPosterPageItem';
+
+import { API_KEY_MOVIES } from '../config'
 
 import arrow_circle_btn from './img/svg-editor-image.svg'
 export default function About() {
@@ -8135,33 +8138,18 @@ export default function About() {
 
 
     const [arrcomments, setarrcomments] = useState()
-    console.log('arrcomments', arrcomments)
     const [loadcomments, setloadcomments] = useState(false)
-    console.log('loadcomments', loadcomments)
 
+    const [imageSlider, setimageSlider] = useState()
+    const [loadimageSlider, setloadimageSlider] = useState(false)
 
-    const fillSimilars = () => {
-        setarrSimpleActers(movie.similars)
-        setloadSimpleActerss(true)
-    }
-    const actorList = () => {
-        setarrActorandValue(movie.actorList)
-        setloadActorandValue(true)
+    const imageSliderFun = () => {
+        setimageSlider(movie.images.items)
+        setloadimageSlider(true)
     }
 
-    const fetchComments = () => {
-        fetch('https://imdb-api.com/en/API/Reviews/k_1371110o/tt0816692')
-            .then(res => res.json())
-            .then(data => {
-                setarrcomments(data.items);
-                setloadcomments(true)
-            })
-    }
 
-    useEffect(() => {
-        actorList()
-        fetchComments()
-        fillSimilars()
+    const setArrStarActors = () => {
         const arr = []
         for (const key of movie.actorList) {
             for (const iterator of movie.starList) {
@@ -8173,6 +8161,45 @@ export default function About() {
         }
         setarrStars(arr)
         setloadStars(true)
+    }
+
+    const fillSimilars = () => {
+        setarrSimpleActers(movie.similars)
+        setloadSimpleActerss(true)
+    }
+    const actorList = () => {
+        setarrActorandValue(movie.actorList)
+        setloadActorandValue(true)
+    }
+
+    const fetchComments = () => {
+        fetch(`https://imdb-api.com/en/API/Reviews/${API_KEY_MOVIES}/tt0816692`)
+            .then(res => res.json())
+            .then(data => {
+                setarrcomments(data.items);
+                setloadcomments(true)
+            })
+    }
+
+    const headerBgc = () => {
+        document.querySelector('.header__inner').style.backgroundImage = `url("${movie.posters.backdrops[Math.floor(Math.random() * movie.posters.backdrops.length + 1)].link}")`
+    }
+
+
+
+    useEffect(() => {
+        actorList()
+        fetchComments()
+        fillSimilars()
+        imageSliderFun()
+        const interBgc = setInterval(() => {
+            headerBgc()
+        }, 20000);
+        setArrStarActors()
+        return () => {
+            clearTimeout(interBgc);
+            document.querySelector('.header__inner').style.backgroundImage = 'url(https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX1900_CR0,662,1900,150_AL_.jpg)'
+        }
     }, [])
 
 
@@ -8193,7 +8220,7 @@ export default function About() {
                                         <div className="contentCard__info">
                                             <div className='header__page'>
                                                 <div className="header__page-img">
-                                                    <img src={movie.image} />
+                                                    {movie.posters.posters && <SwiperPosterPageItem arr={movie.posters.posters} />}
                                                 </div>
                                                 <div className='header_info'>
                                                     <h1 className='header_title'>{movie.fullTitle}</h1>
@@ -8341,7 +8368,7 @@ export default function About() {
                                                         className="gallery__list gallery__list_slimPosterBlock gallery__list_type_poster">
                                                         <Similars arr={arrSimpleActers} flag={loadSimpleActers} />
                                                     </div>
-                                                </div>4
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -8434,13 +8461,13 @@ export default function About() {
                                                             href="/watch/193739/comments">Отзывы</a>
                                                             <div
                                                                 className="nbl-superscript nbl-superscript_style_default nbl-superscript_size_sheicu extraLinks__nbl-superscript">
-                                                                <div className="nbl-superscript__text"> {loadcomments ? arrcomments.length : 'loading'}</div>
+                                                                <div className="nbl-superscript__text"> {loadcomments ? arrcomments.length : ' loading...'}</div>
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div className="comments__subtitle">о фильме «Круиз по джунглям»</div>
+                                            <div className="comments__subtitle">о фильме «{movie.title}»</div>
                                         </header>
                                         <div className="gallery gallery_ivi-carousel">
                                             <div className="gallery__carousel">
@@ -8448,7 +8475,7 @@ export default function About() {
                                                     <div className="gallery__viewport-inner">
                                                         <div
                                                             className="gallery__list gallery__list_ugcTile gallery__list_type_ugcTile">
-                                                            {loadcomments ? <SwipetComments arr={arrcomments} /> : <h1>loading</h1>}
+                                                            {<SwipetComments arr={arrcomments} load={loadcomments} />}
                                                         </div>
                                                     </div>
                                                 </div>

@@ -11,8 +11,8 @@ import SwiperCore, {
 SwiperCore.use([Autoplay]);
 
 
-export default function SwipetComments({ arr }) {
-    console.log('arr', arr)
+export default function SwipetComments({ arr, load }) {
+ 
 
 
     const windowOuterWidth = window.outerWidth
@@ -24,10 +24,10 @@ export default function SwipetComments({ arr }) {
                 disableOnInteraction: true
             }} slidesPerView={4}
             className="mySwiperComments">
-            {arr.map(item => {
+            {load ? arr.map(item => {
                 return (
-                    <SwiperSlide key={item.id}>
-                        <div className="gallery__item">
+                    <SwiperSlide  >
+                        <div key={item.id} className="gallery__item">
                             <div className="ugcTile gallery__ugcTile">
                                 <div className="ugcTile__inner">
                                     <div className="ugcTile__author">{item.username}</div>
@@ -38,7 +38,7 @@ export default function SwipetComments({ arr }) {
                         </div>
                     </SwiperSlide>
                 )
-            })}
+            }) : <h1>loading...</h1>}
         </Swiper>
     )
 }

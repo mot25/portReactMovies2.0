@@ -15,7 +15,7 @@
 
 .header__inner {
   position: relative;
-  background-image: url("https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX1900_CR0,662,1900,150_AL_.jpg");
+  background-image: url(https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX1900_CR0,662,1900,150_AL_.jpg);
   height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,7 @@
   width: 300px;
   height: 100%;
   display: flex;
-  margin-right: 50px;
+  margin-right: 48px;
   align-items: center;
 }
 .input__search {

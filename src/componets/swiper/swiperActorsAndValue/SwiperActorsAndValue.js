@@ -17,7 +17,7 @@ export default function Similars({ arr, flag }) {
                 delay: 5000,
                 disableOnInteraction: true
             }}
-            slidesPerView={10}
+            slidesPerView={10} className="swiperActorsAndValue"
         >
 
             {flag ? arr.map(item => (
