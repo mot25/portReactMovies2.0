@@ -17,7 +17,6 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/portReactMovies2.0" element={<Home />} /> */}
             <Route path="/Movie/:id" element={<Movie />} />
             <Route path='*' element={<NotFound />} />
           </Routes>

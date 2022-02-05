@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from "react-router-dom"
+import { URL_HOME } from '../../../config'
 
 import "swiper/css/bundle";
 import 'swiper/css/scrollbar';
@@ -26,7 +27,8 @@ export default function Similars({ arr, flag }) {
             {flag ? arr.map(item => (
                 <SwiperSlide key={item.id}>
                     <div className="gallery__item">
-                        <Link to={"movie/" + item.id} className="nbl-slimPosterBlock nbl-slimPosterBlock_altHover nbl-slimPosterBlock_type_poster nbl-slimPosterBlock_status_subscription nbl-slimPosterBlock_iconStatus_none nbl-slimPosterBlock_available gallery__nbl-slimPosterBlock">
+                        <Link to={'http://' + URL_HOME + "movie/" + item.id}
+                            className="nbl-slimPosterBlock nbl-slimPosterBlock_altHover nbl-slimPosterBlock_type_poster nbl-slimPosterBlock_status_subscription nbl-slimPosterBlock_iconStatus_none nbl-slimPosterBlock_available gallery__nbl-slimPosterBlock">
                             <div className="nbl-slimPosterBlock__imageSection">
                                 <div
                                     className="nbl-poster nbl-poster_type_poster slimPosterBlock__nbl-poster">
