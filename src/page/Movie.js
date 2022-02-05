@@ -358,8 +358,7 @@ export default function Movie() {
                                                 <div className="comments__links">
                                                     <div className="extraLinks comments__extraLinks">
                                                         <ul className="extraLinks__list">
-                                                            <li className="extraLinks__item"><a className="nbl-link nbl-link_style_paxe extraLinks__nbl-link"
-                                                                href="/watch/193739/comments">Отзывы</a>
+                                                            <li className="extraLinks__item"><div className="nbl-link nbl-link_style_paxe extraLinks__nbl-link">Отзывы</div>
                                                                 <div
                                                                     className="nbl-superscript nbl-superscript_style_default nbl-superscript_size_sheicu extraLinks__nbl-superscript">
                                                                     <div className="nbl-superscript__text"> {loadcomments ? arrcomments.length : ' loading...'}</div>
