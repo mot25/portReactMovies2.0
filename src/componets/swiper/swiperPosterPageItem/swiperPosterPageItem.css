@@ -8,6 +8,15 @@
   height: 100%;
   object-fit: cover;
 }
-.swiper {
-    height: auto;
+.swiperPosterPageItem {
+  height: auto;
+}
+
+.swiperPosterPageItem {
+  overflow: initial;
+}
+
+.mySwiperTop > .swiper-button-next,
+.mySwiperTop > .swiper-button-prev {
+  top: -3%;
 }

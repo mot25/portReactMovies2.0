@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { API_KEY_MOVIES } from '../../config';
 import SwiperFamousFilms from '../../componets/swiper/MostPopular/SwiperFamousFilms'
 import '../section.css'

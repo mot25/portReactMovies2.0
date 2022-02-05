@@ -19,7 +19,7 @@ export default function App({ arr }) {
                 effect={"cards"}
                 grabCursor={true}
                 modules={[EffectCards]}
-                className="mySwiper"
+                className="swiperPosterPageItem"
             >
                 {arr.map(item => {
                     return (

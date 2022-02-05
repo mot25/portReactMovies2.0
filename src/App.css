@@ -34,3 +34,8 @@ body {
   border-radius: 0px;
   box-shadow: inset -2.4px 6.1px 30px 24px #B3B3B3;
   }
+  .swiper {
+
+    overflow: visible;
+
+}

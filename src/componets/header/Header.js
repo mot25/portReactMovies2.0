@@ -12,7 +12,7 @@ export default function Header() {
           <button className='btn__search'><img src={search_icon} /></button>
         </div>
         <ul className="header__list">
-          <Link to='/about' className="header__item">Фильм</Link>
+          <Link to='/movie' className="header__item">Фильм</Link>
           <Link to='#' className="header__item">Сериал</Link>
           <Link to='#' className="header__item">Закладки</Link>
         </ul>

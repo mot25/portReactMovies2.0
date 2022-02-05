@@ -6,7 +6,7 @@ import TopFamousSerials from "./TopFamousSerials"
 export default function Home() {
     return <>
          <MostFamousMovies />
-        {/* <TopFamousMovies />
-        <TopFamousSerials /> */}
+        <TopFamousMovies />
+        <TopFamousSerials />
     </>;
 }

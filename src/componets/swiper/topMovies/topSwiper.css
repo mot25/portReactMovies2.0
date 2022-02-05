@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400&display=swap");
+
 .swiper_items_TOP {
   color: #fff;
 }
@@ -44,10 +46,8 @@
   overflow: visible;
 }
 
-.mySwiperTop > .swiper-button-next,
-.mySwiperTop > .swiper-button-prev {
-  top: -13%;
-
+.mySwiperTop > .swiper-button-next, .mySwiperTop > .swiper-button-prev {
+  top: -3%;
   width: 56px;
   height: 56px;
 }
@@ -56,4 +56,13 @@
 .swiper-rtl .swiper-button-next {
   left: auto;
   right: 56px;
+}
+
+.mySwiperTop {
+  height: 430px;
+}
+
+.mySwiperTop .swiper-items {
+  font-family: "PT Serif", serif;
+  color: #fff;
 }
