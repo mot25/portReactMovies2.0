@@ -70,7 +70,8 @@ export default function Movie() {
         setloadActorandValue(true)
     }
 
-    const fetchComments = () => {
+    const reviewsFetch = (e) => {
+        e.preventDefault()
         fetch(`https://imdb-api.com/en/API/Reviews/${API_KEY_MOVIES}/${id}`)
             .then(res => res.json())
             .then(data => {
@@ -89,7 +90,6 @@ export default function Movie() {
         fetchMain(idMain)
         if (loadMainFetch) {
             actorList()
-            fetchComments()
             fillSimilars()
             const interBgc = setInterval(() => {
                 headerBgc()
@@ -100,12 +100,14 @@ export default function Movie() {
                 document.querySelector('.header__inner').style.backgroundImage = 'url(https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX1900_CR0,662,1900,150_AL_.jpg)'
             }
         }
-    }, [loadMainFetch])
+    }, [])
 
 
     const clickBtn = () => {
         document.querySelector('.read__more_btn').classList.toggle('active_btn')
     }
+
+    
 
 
     return (
@@ -121,7 +123,7 @@ export default function Movie() {
                                             <div className="contentCard__info">
                                                 <div className='header__page'>
                                                     <div className="header__page-img">
-                                                        {movie.posters.posters && <SwiperPosterPageItem arr={movie.posters.posters} />}
+                                                        {movie.posters.posters === null ? <h1>No poster</h1> : <SwiperPosterPageItem arr={movie.posters.posters} />}
                                                     </div>
                                                     <div className='header_info'>
                                                         <h1 className='header_title'>{movie.fullTitle}</h1>
@@ -358,10 +360,10 @@ export default function Movie() {
                                                 <div className="comments__links">
                                                     <div className="extraLinks comments__extraLinks">
                                                         <ul className="extraLinks__list">
-                                                            <li className="extraLinks__item"><div className="nbl-link nbl-link_style_paxe extraLinks__nbl-link">Отзывы</div>
+                                                            <li className="extraLinks__item"><button onClick={reviewsFetch} className="nbl-link nbl-link_style_paxe extraLinks__nbl-link">Отзывы</button>
                                                                 <div
                                                                     className="nbl-superscript nbl-superscript_style_default nbl-superscript_size_sheicu extraLinks__nbl-superscript">
-                                                                    <div className="nbl-superscript__text"> {loadcomments ? arrcomments.length : ' loading...'}</div>
+                                                                    <div className="nbl-superscript__text"> {loadcomments ? arrcomments.length : 'click left button reviewsПШЕ Ф'}</div>
                                                                 </div>
                                                             </li>
                                                         </ul>
